@@ -1,0 +1,21 @@
+{
+  "name": "kuromoji-zeit",
+  "version": "1.0.0",
+  "description": "Tiny Zeit app that returns kuromoji",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "kuromoji",
+    "zeit",
+    "api"
+  ],
+  "author": "Martin Heidegger <martin.heidegger@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "hepburn": "^1.0.0",
+    "kuromoji": "^0.1.1"
+  }
+}
