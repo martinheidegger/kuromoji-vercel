@@ -17,5 +17,14 @@
   "dependencies": {
     "hepburn": "^1.0.0",
     "kuromoji": "^0.1.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinheidegger/kuromoji-zeit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/martinheidegger/kuromoji-zeit/issues"
+  },
+  "homepage": "https://github.com/martinheidegger/kuromoji-zeit#readme"
 }
