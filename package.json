@@ -13,7 +13,7 @@
     "api"
   ],
   "author": "Martin Heidegger <martin.heidegger@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "hepburn": "^1.0.0",
     "kuromoji": "^0.1.1"
