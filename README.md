@@ -19,10 +19,10 @@ Simply send a request like `/?input=黒文字` and it will return JSON data with
 
 ## Example
 
-The latest version of kuromoji-zeit is published online at https://kuromoji-zeit-uadjrjuzoy.now.sh
+The latest version of kuromoji-zeit is published online at https://kuromoji-zeit.now.sh
 
 Try this in your browser:
- https://kuromoji-zeit-uadjrjuzoy.now.sh/?input=%E9%BB%92%E6%96%87%E5%AD%97
+ https://kuromoji-zeit.now.sh/?input=%E9%BB%92%E6%96%87%E5%AD%97
 
 ## License
 MIT
