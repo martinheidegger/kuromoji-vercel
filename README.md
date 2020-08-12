@@ -1,7 +1,9 @@
-# kuromoji-zeit
-Zeit server that serves [kuromoji](https://github.com/takuyaa/kuromoji.js) data.
+# kuromoji-vercel
+
+Vercel API Server that serves [kuromoji](https://github.com/takuyaa/kuromoji.js) data.
 
 ## Starting
+
 This is a simple Nodejs Project:
 
 ```
@@ -15,14 +17,7 @@ Listening for requests.
 
 ## Usage
 
-Simply send a request like `/?input=黒文字` and it will return JSON data with the kuromoji information.
-
-## Example
-
-The latest version of kuromoji-zeit is published online at https://kuromoji-zeit.now.sh
-
-Try this in your browser:
- https://kuromoji-zeit.now.sh/?input=%E9%BB%92%E6%96%87%E5%AD%97
+Simply send a request like `/api/黒文字` and it will return JSON data with the kuromoji information.
 
 ## License
-MIT
+[MIT](./LICENSE)

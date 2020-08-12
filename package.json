@@ -1,10 +1,10 @@
 {
-  "name": "kuromoji-zeit",
+  "name": "kuromoji-vercel",
   "version": "1.0.0",
-  "description": "Tiny Zeit app that returns kuromoji",
-  "main": "index.js",
+  "private": true,
+  "description": "Tiny Vercel app that returns kuromoji",
   "scripts": {
-    "start": "node index.js",
+    "start": "vercel dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,16 +15,19 @@
   "author": "Martin Heidegger <martin.heidegger@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@vercel/node": "^1.7.4",
     "hepburn": "^1.2.0",
     "kuromoji": "^0.1.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "vercel": "^19.2.0"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/martinheidegger/kuromoji-zeit.git"
+    "url": "git+https://github.com/martinheidegger/kuromoji-vercel.git"
   },
   "bugs": {
-    "url": "https://github.com/martinheidegger/kuromoji-zeit/issues"
+    "url": "https://github.com/martinheidegger/kuromoji-vercel/issues"
   },
-  "homepage": "https://github.com/martinheidegger/kuromoji-zeit#readme"
+  "homepage": "https://github.com/martinheidegger/kuromoji-vercel#readme"
 }
