@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style type="text/css">
+      html {
+        background-color: #fbfbfb;
+      }
+      .en, .ja {
+        display: none;
+      }
+      #lang-switch-en:checked ~ .en {
+        display: block!important;
+      }
+      #lang-switch-ja:checked ~ .ja {
+        display: block!important;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="lang-switch-en" class="lang-switch" type="radio" name="lang" value="en" checked>
+    <label for="lang-switch-en">English</label>
+    <input id="lang-switch-ja" class="lang-switch" type="radio" name="lang" value="ja">
+    <label for="lang-switch-ja">日本語</label>
+    <div class="en">
+      <h1 lang="en-GB">Kuromoji Converter</h1>
+      <p>
+        This is a demo site for <a href="http://github.com/martinheidegger/kuromoji-vercel" target="_blank">martinheidegger/kuromoji-vercel</a>, a simple
+        online tool that converts any given input into <a href="https://github.com/takuyaa/kuromoji.js" target="_blank">kuromoji<a> JSON.
+      </p>
+      <h2 lang="en-GB">Try It!</h2>
+      <p lang="en-GB">
+        Enter some Japanese text, like <a href="javascript:update('こんにちは世界!')">"こんにちは世界!"</a> below.
+      </p>
+    </div>
+    <div class="ja">
+      <h1 lang="ja-JP">黒文字コンバータ</h1>
+      <p lang="ja-JP">
+        これは、<a href="http://github.com/martinheidegger/kuromoji-vercel" target="_blank">martinheidegger/kuromoji-vercel</a>をデモする簡単なオンラインツールです。このツールを使って
+        テキストを黒文字の JSON に変換します。
+      </p>
+      <h2 lang="ja-JP">すぐ試す!</h2>
+      <p lang="ja-JP">
+        以下のフィルドに<a href="javascript:update('こんにちは世界!')">「こんにちは世界!」</a>みたいな日本語のテキストを入力してください。
+      </p>
+    </div>
+    <input id="input">
+    <a id="link" target="_blank">JSON</a>
+    <pre id="output">
+    </pre>
+    <script type="text/javascript">
+      const input = document.getElementById('input')
+      const output = document.getElementById('output')
+      const link = document.getElementById('link')
+      let control
+      function update (value) {
+        if (control) {
+          control.abort()
+        }
+        if (this !== input) {
+          input.value = value
+        }
+        control = new AbortController()
+        output.innerHTML = '[Loading]'
+        const url = `/api/${encodeURIComponent(input.value)}`
+        link.setAttribute('href', url)
+        const signal = control.signal
+        fetch(url, { signal })
+          .then(res => res.json())
+          .then(json => {
+            output.innerHTML = JSON.stringify(json, null, 2)
+          })
+          .catch(err => {
+            if (signal.aborted) {
+              return
+            }
+            output.innerHTML = err.stack
+          })
+      }
+      input.oninput = update
+    </script>
+  </body>
+</html>
