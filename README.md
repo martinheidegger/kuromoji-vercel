@@ -19,5 +19,9 @@ Listening for requests.
 
 Simply send a request like `/api/黒文字` and it will return JSON data with the kuromoji information.
 
+## Live
+
+You can test this app live on https://kuromoji-vercel.vercel.app/
+
 ## License
 [MIT](./LICENSE)
