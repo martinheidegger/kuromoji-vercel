@@ -17,7 +17,7 @@ Listening for requests.
 
 ## Usage
 
-Simply send a request like `/api/黒文字` and it will return JSON data with the kuromoji information.
+Simply send a request like `/api/?input=黒文字` and it will return JSON data with the kuromoji information.
 
 ## Live
 

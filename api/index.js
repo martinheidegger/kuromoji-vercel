@@ -18,7 +18,10 @@ const tokenizerP = new Promise((resolve, reject) => {
 
 module.exports = (req, res) => {
   if (req.method !== 'GET') {
-    return res.status(400).send('Only GET allowed')
+    return res.status(405).send('Only GET allowed')
+  }
+  if (!req.query.input) {
+    return res.status(400).send('Input query parameter required')
   }
   if (req.query.input === '') {
     return res.json([])

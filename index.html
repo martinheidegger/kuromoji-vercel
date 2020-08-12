@@ -62,11 +62,16 @@
         }
         control = new AbortController()
         output.innerHTML = '[Loading]'
-        const url = `/api/${encodeURIComponent(input.value)}`
+        const url = `/api/?input=${encodeURIComponent(input.value)}`
         link.setAttribute('href', url)
         const signal = control.signal
         fetch(url, { signal })
-          .then(res => res.json())
+          .then(res => {
+            if (res.status !== 200) {
+              return res.text().then(message => Promise.reject(new Error(`[status:${res.status}]: ${message}`)))
+            }
+            return res.json()
+          })
           .then(json => {
             output.innerHTML = JSON.stringify(json, null, 2)
           })
