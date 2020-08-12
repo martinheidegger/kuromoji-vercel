@@ -15,8 +15,8 @@
   "author": "Martin Heidegger <martin.heidegger@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "hepburn": "^1.0.0",
-    "kuromoji": "^0.1.1"
+    "hepburn": "^1.2.0",
+    "kuromoji": "^0.1.2"
   },
   "devDependencies": {},
   "repository": {
