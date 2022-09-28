@@ -15,12 +15,12 @@
   "author": "Martin Heidegger <martin.heidegger@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@vercel/node": "^2.5.1",
+    "@vercel/node": "^2.5.20",
     "hepburn": "^1.2.0",
     "kuromoji": "^0.1.2"
   },
   "devDependencies": {
-    "vercel": "^27.3.1"
+    "vercel": "^28.4.4"
   },
   "repository": {
     "type": "git",
