@@ -20,7 +20,7 @@
     "kuromoji": "^0.1.2"
   },
   "devDependencies": {
-    "vercel": "^28.4.4"
+    "vercel": "^28.18.5"
   },
   "repository": {
     "type": "git",
