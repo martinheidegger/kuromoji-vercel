@@ -32,12 +32,16 @@ export default async (req, res) => {
     if (result) {
       for (const entry of result) {
         if (entry.reading) {
-          entry.hepburnReading = hepburn.fromKana(entry.reading)
-          entry.romanjiReading = hepburn.cleanRomaji(entry.hepburnReading)
+          const hepburnReading = hepburn.fromKana(entry.reading)
+          entry.readingHiragana = hepburn.toHiragana(hepburnReading)
+          entry.hepburnReading = hepburnReading
+          entry.romanjiReading = hepburn.cleanRomaji(hepburnReading)
         }
         if (entry.pronunciation) {
-          entry.hepburnPronunciation = hepburn.fromKana(entry.pronunciation)
-          entry.romanjiPronunciation = hepburn.cleanRomaji(entry.hepburnPronunciation)
+          const hepburnPronunciation = hepburn.fromKana(entry.pronunciation)
+          entry.pronunciationHiragana = hepburn.toHiragana(hepburnPronunciation)
+          entry.hepburnPronunciation = hepburnPronunciation
+          entry.romanjiPronunciation = hepburn.cleanRomaji(hepburnPronunciation)
         }
       }
     }
