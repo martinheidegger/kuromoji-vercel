@@ -10,7 +10,7 @@ const tokenizerP = new Promise((resolve, reject) => {
     .builder({dicPath})
     .build((error, tokenizer) => {
       if (error) {
-        return reject(err)
+        return reject(error)
       }
       resolve(tokenizer)
     })
