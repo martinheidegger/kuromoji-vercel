@@ -2,6 +2,7 @@
   "name": "kuromoji-vercel",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Tiny Vercel app that returns kuromoji",
   "scripts": {
     "start": "vercel dev",
@@ -15,12 +16,12 @@
   "author": "Martin Heidegger <martin.heidegger@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@vercel/node": "^2.5.20",
-    "hepburn": "^1.2.0",
+    "@vercel/node": "^2.10.3",
+    "hepburn": "^1.2.1",
     "kuromoji": "^0.1.2"
   },
   "devDependencies": {
-    "vercel": "^28.4.4"
+    "vercel": "^39.1.2"
   },
   "repository": {
     "type": "git",
