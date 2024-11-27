@@ -1,0 +1,7 @@
+{
+    "functions": {
+        "api/index.mjs": {
+            "includeFiles": "node_modules/kuromoji/dict/*"
+        }
+    }
+}
